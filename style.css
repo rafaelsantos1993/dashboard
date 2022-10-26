@@ -1,44 +1,117 @@
-body{
-    margin:10px;
+/* Basuc elements Set up */
+body {
+    margin: 0px;
+    padding: 0px;
+    border: 0;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 4fr;
+    justify-items: start;
 }
-h1{
+
+h1 {
     font-size: 1rem;
 }
 
-h2{
+h2 {
     font-size: 0.9rem;
 }
 
-h3{
+h3 {
     font-size: 0.7rem;
 }
 
-p{
+p {
     font-size: 0.8rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .annoucements p {
     font-size: 0.6rem;
 }
 
-.lateralMenuBar{
+/*Lateral bar grid and style*/
+.lateralMenuBar {
     grid-row: 1/3;
+    grid-column: 1/2;
+    background-color: aqua;
+    display: grid;
+    font-family: "Roboto", 'Courier New', Courier, monospace;
+    color: white;
+    font-weight: bold;
+    align-content: start;
+    width: 100%;
 }
-.header{
+
+/* Adjusting the content, to be more
+left justified*/
+.lateralMenuBar ul {
+    padding-left: 10px;
+    padding-right: 40px;
+}
+
+/*First seven navigation buttons of the lateral menu grid*/
+.navigation-buttons {
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: auto-fill(1fr);
+    grid-template-rows: repeat(7, 1fr);
+    align-items: start;
+    align-content: start;
+    gap:8px;
+    font-size: 0.7em;
+}
+
+/* Last buttons grid in the lateral menu */
+.setting-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    font-size: 0.7em;
+}
+
+/* Verical aligment of the contents in the 
+lateral menu bar (icons and text)*/
+.lateralMenuBar li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Icon size in the Lateral Menu Bar*/
+.lateralMenuBar img {
+    height: 15px;
+}
+
+/*First icon of lateral menu bar
+to adjust its size*/
+.dashboard-icon {
+    height: 35px;
+    font-size: 0.9em;
+    
+}
+.dashboard-icon img{
+    height: 30px;
+}
+
+.header {
     grid-column: 2/3;
     grid-row: 1/2;
     display: grid;
     grid-template-columns: 3fr 2fr;
 }
 
-ul{
-    list-style-type: none;
-}
 
-.header li{
+
+.header li {
     display: inline;
 }
 
@@ -49,24 +122,26 @@ ul{
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 }
-.articles{
+
+.articles {
     grid-column: 1/2;
     grid-row: 1/3;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-content: start;
 }
-.articles>h1{
+
+.articles>h1 {
     grid-column: 1/3;
 }
 
-.annoucements{
+.annoucements {
     grid-column: 2/3;
     display: flex;
     flex-direction: column;
     border-style: solid;
 }
+
 .trending {
     grid-column: 2/3;
 }
-
-
