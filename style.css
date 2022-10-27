@@ -34,6 +34,10 @@ ul {
     list-style-type: none;
 }
 
+.header li {
+    display: inline;
+}
+
 .annoucements p {
     font-size: 0.6rem;
 }
@@ -102,17 +106,71 @@ to adjust its size*/
     height: 30px;
 }
 
+/*Header grid*/
 .header {
     grid-column: 2/3;
     grid-row: 1/2;
     display: grid;
     grid-template-columns: 3fr 2fr;
+    width: 100%;
+    height: 100%;
+    margin-top: -12px;
 }
 
+/*Search bar style*/
+#searchBar{
+    width: 90%;
+    border-radius: 10px;
+    border-style: none;
+    background-color: #e5e7eb;
+}
 
+#searchBar:focus {
+    outline: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e5e7eb;
+}
 
-.header li {
-    display: inline;
+/*Sets the magnify picture a suitable size
+and lower it so align with the bar
+pads to ajust relative to the as well*/
+
+label[for="searchBar"]>img{
+    height: 18px;
+    margin-bottom: -5px;
+    padding-right: 5px;
+}
+
+/*Pads first grid to get far form the border*/
+.header form{
+    align-self: center;
+    padding-left: 25px;
+    padding-top: 12px;
+}
+
+/*Selexts the grid 1x2 and center align itens*/
+.action-buttons {
+    display: flex;
+    align-items: center;
+   }
+   
+/*Selects the second grid 
+and formats icons*/
+.bell-icon {
+    height: 15px;
+    margin-top: 2px;
+}
+
+.pp-picture {
+    height: 30px;
+    border-radius: 50%;
+    padding: 12px;
+}
+
+.profile-name {
+    font-size: 0.8em;
+    font-weight: bolder;
 }
 
 .dashboard {
